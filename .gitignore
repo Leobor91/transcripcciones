@@ -8,9 +8,6 @@ descargas/
 venv/
 
 # Ignorar archivos de configuración de IDE
-.vscode/
-.idea/
+
 
 # Ignorar archivos de sistema
-.DS_Store
-Thumbs.db
