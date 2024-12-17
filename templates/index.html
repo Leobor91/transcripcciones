@@ -8,23 +8,32 @@
 </head>
 <body>
     <div class="container">
-        <h1>Subir Archivo para Transcripción</h1>
-        <form id="uploadForm" enctype="multipart/form-data">
-            <input type="file" name="file">
-            <button type="submit">Subir</button>
-            <button type="button" id="clearUploadForm">Clear</button>
-        </form>
-        <div id="message"></div>
-        <div id="transcription"></div>
-        <div id="textInputContainer">
-            <h1>Descargar Audio para Transcripción Go</h1>
-            <h2>Ingresar Texto</h2>
-            <input type="text" id="textInput1" placeholder="Ingresa el nombre del usuario">
-            <input type="text" id="textInput2" placeholder="Ingresa la ruta del audio">
-            <div class="button-container">
-                <button id="downloadButton" disabled>Descargar</button>
-                <button type="button" id="clearTextInput">Clear</button>
+        <div class="main-content">
+            <h1>Subir Archivo para Transcripción</h1>
+            <form id="uploadForm" enctype="multipart/form-data">
+                <input type="file" name="file">
+                <button type="submit">Subir</button>
+                <button type="button" id="clearUploadForm">Clear</button>
+            </form>
+            <div id="message"></div>
+            <div id="transcription"></div>
+            
+            <div id="textInputContainer">
+                <h1>Descargar Audio para Transcripción Go</h1>
+                <h2>Ingresar Texto</h2>
+                <input type="text" id="textInput1" placeholder="Ingresa el nombre del usuario">
+                <input type="text" id="textInput2" placeholder="Ingresa la ruta del audio">
+                <div class="button-container">
+                    <button id="downloadButton" disabled>Descargar</button>
+                    <button type="button" id="clearTextInput">Clear</button>
+                </div>
             </div>
+        </div>
+
+        <div id="listarTxtContainer" class="sidebar">
+            <h1>Listar Archivos TXT</h1>
+            <button onclick="listarArchivos()">Listar Archivos</button>
+            <ul id="lista-archivos"></ul>
         </div>
     </div>
     <script src="{{ url_for('static', filename='script.js') }}"></script>

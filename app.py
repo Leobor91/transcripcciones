@@ -43,6 +43,15 @@ def descargar_audio():
     ruta_salida_webm = procesar_audio(consulta)
     return jsonify({"message": "Archivo descargado exitosamente", "ruta": ruta_salida_webm})
 
+@app.route('/listar_txt', methods=['GET'])
+def listar_txt():
+    try:
+        uploads = os.path.join(app.root_path, 'uploads')  # Corregido aquí
+        archivos_txt = [f for f in os.listdir(uploads) if f.endswith('.txt')]
+        return jsonify({'archivos_txt': archivos_txt})
+    except Exception as e:
+        return jsonify({'error': str(e)}), 500
+
 
 def convertir_audio(input_file, output_file):
     audio = AudioSegment.from_file(input_file)
