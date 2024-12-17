@@ -1,3 +1,7 @@
+document.addEventListener('DOMContentLoaded', function() {
+    listarArchivos();
+});
+
 document.getElementById('uploadForm').addEventListener('submit', function(event) {
     event.preventDefault();
     var formData = new FormData(this);
@@ -80,3 +84,24 @@ document.getElementById('clearTextInput').addEventListener('click', function() {
     document.getElementById('textInput2').value = '';
     validateInputs();
 });
+
+// Función para listar archivos TXT
+function listarArchivos() {
+    fetch('/listar_txt')
+        .then(response => response.json())
+        .then(data => {
+            const listaArchivos = document.getElementById('lista-archivos');
+            listaArchivos.innerHTML = '';
+            data.archivos_txt.forEach(archivo => {
+                const li = document.createElement('li');
+                const link = document.createElement('a');
+                link.href = `/uploads/${archivo}`;
+                link.textContent = archivo;
+                link.target = '_blank';
+                li.appendChild(link);
+                listaArchivos.appendChild(li);
+            });
+        })
+        .catch(error => console.error('Error:', error));
+
+}

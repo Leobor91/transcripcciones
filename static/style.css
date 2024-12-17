@@ -21,25 +21,61 @@ body {
     text-align: center;
 }
 
-/* Título principal */
-h1 {
-    color: var(--color-verde-azulado);
-    margin-top: 20px;
-    font-size: 2.5rem;
+.container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 90%;
+    max-width: 1200px;
+    margin: 20px auto;
 }
 
-/* Formulario */
+.main-content {
+    flex: 3;
+    padding: 20px;
+}
+
+.sidebar {
+    flex: 1;
+    padding: 20px;
+    background-color: #f4f4f4;
+    border-left: 1px solid #ccc;
+}
+
+h1 {
+    font-size: 24px;
+    color: var(--color-verde-azulado);
+    margin-bottom: 10px;
+}
+
+h2 {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
 form {
     background-color: var(--color-beige);
-    margin: 20px auto;
+    margin-bottom: 20px;
     padding: 20px;
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     display: inline-block;
 }
 
-input[type="file"] {
+input[type="file"], input[type="text"] {
+    width: 100%;
+    max-width: 600px;
+    padding: 10px;
     margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+input[type="text"]::placeholder {
+    text-align: center;
+    font-family: 'Arial', sans-serif;
+    font-size: 1.2rem;
+    color: var(--color-marron);
 }
 
 button {
@@ -61,14 +97,23 @@ button:disabled {
     cursor: not-allowed;
 }
 
-#message {
+.button-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+}
+
+#downloadButton, #clearTextInput {
+    margin: 0 5px;
+}
+
+#message, #transcription {
     margin-top: 20px;
     color: #333;
 }
 
 #transcription {
-    margin-top: 20px;
-    color: #333;
     white-space: pre-wrap;
     text-align: left;
     display: inline-block;
@@ -82,35 +127,15 @@ button:disabled {
     align-items: center;
 }
 
-input[type="text"] {
-    width: 100%;
-    max-width: 600px;
-    margin-bottom: 20px;
-    font-family: 'Arial', sans-serif;
-    font-size: 1rem;
-    text-align: center;
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
+#listarTxtContainer {
+    margin-top: 20px;
 }
 
-input[type="text"]::placeholder {
-    text-align: center;
-    font-family: 'Arial', sans-serif;
-    font-size: 1.2rem;
-    color: var(--color-marron);
+#lista-archivos {
+    list-style-type: none;
+    padding: 0;
 }
 
-.button-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-#downloadButton {
-    margin: 0 5px;
-}
-
-#clearTextInput {
-    margin: 0 5px;
+#lista-archivos li {
+    margin-bottom: 10px;
 }
