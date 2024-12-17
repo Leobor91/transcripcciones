@@ -1,0 +1,116 @@
+/* Paleta de colores */
+:root {
+    --color-marron: #7A4D33;
+    --color-verde-azulado: #3C707D;
+    --color-beige: #DDBA96;
+    --color-blanco: #FFFFFF;
+    --color-gris-claro: #F5F5F5;
+}
+
+/* General */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: var(--color-gris-claro);
+    color: var(--color-marron);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    text-align: center;
+}
+
+/* Título principal */
+h1 {
+    color: var(--color-verde-azulado);
+    margin-top: 20px;
+    font-size: 2.5rem;
+}
+
+/* Formulario */
+form {
+    background-color: var(--color-beige);
+    margin: 20px auto;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    display: inline-block;
+}
+
+input[type="file"] {
+    margin-bottom: 20px;
+}
+
+button {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 5px;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+button:disabled {
+    background-color: #cccccc;
+    cursor: not-allowed;
+}
+
+#message {
+    margin-top: 20px;
+    color: #333;
+}
+
+#transcription {
+    margin-top: 20px;
+    color: #333;
+    white-space: pre-wrap;
+    text-align: left;
+    display: inline-block;
+    max-width: 80%;
+}
+
+#textInputContainer {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+input[type="text"] {
+    width: 100%;
+    max-width: 600px;
+    margin-bottom: 20px;
+    font-family: 'Arial', sans-serif;
+    font-size: 1rem;
+    text-align: center;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+input[type="text"]::placeholder {
+    text-align: center;
+    font-family: 'Arial', sans-serif;
+    font-size: 1.2rem;
+    color: var(--color-marron);
+}
+
+.button-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#downloadButton {
+    margin: 0 5px;
+}
+
+#clearTextInput {
+    margin: 0 5px;
+}
