@@ -16,7 +16,7 @@ Este proyecto permite subir archivos de audio para transcripción y descargar ar
 1. Clona el repositorio:
 
 ```bash
-git clone https://github.com/tu-usuario/proyecto-audio.git
+git clone https://github.com/Leobor91/transcripcciones.git
 cd proyecto-audio
 
 python -m venv venv
@@ -85,3 +85,5 @@ Este proyecto está licenciado bajo la Licencia MIT. Consulta el archivo LICENSE
 
 
 Este archivo [README.md](http://_vscodecontentref_/6) proporciona una guía completa para configurar y ejecutar el proyecto, así como una descripción de los archivos y su funcionalidad. Asegúrate de ajustar cualquier detalle específico de tu proyecto según sea necesario.
+
+agrgar ka ruta de la carpeta ffmpeg-7.0.2-essentials_build/bin al path de las variables de entorno
