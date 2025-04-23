@@ -86,4 +86,7 @@ Este proyecto está licenciado bajo la Licencia MIT. Consulta el archivo LICENSE
 
 Este archivo [README.md](http://_vscodecontentref_/6) proporciona una guía completa para configurar y ejecutar el proyecto, así como una descripción de los archivos y su funcionalidad. Asegúrate de ajustar cualquier detalle específico de tu proyecto según sea necesario.
 
-agrgar ka ruta de la carpeta ffmpeg-7.0.2-essentials_build/bin al path de las variables de entorno
+Ubica la carpeta de instalación de FFmpeg en el disco C, 
+
+Luego, agrega esta ruta al `PATH` de las variables de entorno.
+por ejemplo:  `C:\ffmpeg-7.0.2-essentials_build\bin` 
